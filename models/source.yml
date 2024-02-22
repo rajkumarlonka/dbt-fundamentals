@@ -5,4 +5,9 @@ sources:
     schema: raw
     tables:
       - name: stg_location
+      - name: stg_driver
+      - name: stg_rider
+      - name: stg_vehicle
+      - name: stg_orders
+      
 
