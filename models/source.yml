@@ -1,0 +1,8 @@
+version: 2
+sources:
+  - name: raw
+    database: dev_demo
+    schema: raw
+    tables:
+      - name: stg_location
+
