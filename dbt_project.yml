@@ -32,7 +32,8 @@ clean-targets:         # directories to be removed by `dbt clean`
 # as tables. These settings can be overridden in the individual model files
 # using the `{{ config(...) }}` macro.
 models:
-  curated:
-          +materialized: table
-          database: "{{target.name}}_demo"
-          +schema: curated
+  dbt-fundamentals:
+    curated:
+      +materialized: table
+      database: "{{target.name}}_demo"
+      +schema: curated
