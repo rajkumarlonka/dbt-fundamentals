@@ -6,15 +6,20 @@
      schema='curated',
      incremental_strategy='merge',
      unique_key='order_id',
-     transient=false
+     post_hook = "{{update_ctrl()}}"
     )
 }}
+{% set last_upd_time = ctrl_dt() %}
+
 
 select 
+
 *
-from {{source('raw', 'stg_orders')}}
+
+from {{source('raw', 'stg_orders')}} 
 
 {% if is_incremental() %}
-   where order_ingestion_datetime > max(order_ingestion_datetime) from {{ this }}
+   where order_ingestion_datetime > '{{ last_upd_time }}'  
+                                    
 {% endif %}
 

@@ -9,5 +9,17 @@ sources:
       - name: stg_rider
       - name: stg_vehicle
       - name: stg_orders
+      - name: stg_employees
+  - name: audit
+    database: dev_demo
+    schema: audit
+    tables:
+      - name: job_ctrl_tbl
+  - name: curated
+    database: dev_demo
+    schema: curated
+    tables:
+      - name: com_config
+      
       
 
