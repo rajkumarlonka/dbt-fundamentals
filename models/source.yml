@@ -10,6 +10,19 @@ sources:
       - name: stg_vehicle
       - name: stg_orders
       - name: stg_employees
+      - name: stg_timestamps
+        columns:
+          - name: id
+            tests:
+              - unique:
+                  config:
+                    severity: warn
+            
+                 
+          
+         
+          
+
   - name: audit
     database: dev_demo
     schema: audit

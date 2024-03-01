@@ -20,7 +20,7 @@ department::VARCHAR(50) as department,
 Replace(email,'`','')::VARCHAR(100) as email,
 manager::NUMBER as manager_id,
 salary::NUMBER(38,2) as salary,
-current_timestamp() as load_ins_time
+load_ins_time as load_ins_time
 from {{source('raw', 'stg_employees')}} 
 )
 select 
