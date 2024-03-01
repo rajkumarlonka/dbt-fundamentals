@@ -12,7 +12,7 @@
 
 {% set tz = timezone_map.get(input_timezone) %}
 {% if tz is not none %}
-    {{ tz }}
+    {{ return(tz) }}
 {% else %}
     Unknown Timezone
 {% endif %}
